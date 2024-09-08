@@ -23,7 +23,7 @@ jobs:
         USER: ${{ secrets.VPS_USER }}
       run: |
         ssh -o StrictHostKeyChecking=no $USER@$HOST << EOF
-          cd /var/depo_git
+          cd /var/depot_git
           git --work-tree=/www/wwwroot/$HOST --git-dir=/var/depot_git checkout -f main
           /deploy.sh
         EOF
