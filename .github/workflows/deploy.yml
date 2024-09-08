@@ -25,5 +25,5 @@ jobs:
         ssh -o StrictHostKeyChecking=no $USER@$HOST << EOF
           cd /var/depot_git
           git --work-tree=/www/wwwroot/$HOST --git-dir=/var/depot_git checkout -f main
-          /deploy.sh
+          ./deploy.sh
         EOF
